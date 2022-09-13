@@ -38,17 +38,25 @@ body{
     transform: translate(-50%, -50%);
     background-color: var(--tile-bg-color);
     width: 90%;
-    max-width: 435px;
-    border-radius: 1rem;
-    box-shadow: 0 0 0.5rem hsl(30, 4%, 67%);
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px hsla(34, 4%, 67%, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.product-info{
+    width: 95%;
     display: flex;
     flex-direction: column;
 }
 
 .product-img{
     width: 100%;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 
 /* ============
@@ -59,8 +67,8 @@ body{
 h1, p{
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
+    margin-top: 0.5ex;
+    margin-bottom: 1ex;
     font-family: "Montserrat";
 }
 
@@ -69,17 +77,22 @@ h1,
 .current-price{
     font-family: "Fraunces";
     font-weight: 700;
+    line-height: 1em;
 }
 
 .product-type{
     color: var(--normal-txt-color);
     font-size: 0.825rem;
     letter-spacing: 0.7ch;
+    margin-top: 4ex;
+    margin-bottom: 1.5ex;
 }
 
 /* Product description */
 .product-desc{
     color: var(--normal-txt-color);
+    line-height: 1.45em;
+    font-size: 0.9em;
 }
 
 /* Price container */
@@ -96,6 +109,7 @@ h1,
 .old-price{
     text-decoration: line-through;
     color: var(--normal-txt-color);
+    font-size: 0.9em;
 }
 
 /* ============
@@ -105,8 +119,7 @@ h1,
 .cart-btn{
     background-color: var(--theme-color);
     border: none;
-    margin: 15px;
-    margin-top: 0;
+    margin: 0 15px 3ex 15px;
     color: var(--tile-bg-color);
     padding: 15px;
     border-radius: 7px;
@@ -121,4 +134,21 @@ h1,
 .cart-btn:hover{
     cursor: pointer;
     background-color: var(--darker-theme-color);
+}
+
+/* RESPONSIVE PART */
+@media screen and (min-width: 800px) {
+    .product-container {
+      flex-direction: row;
+      width: 70%;
+      max-width: 550px;
+      max-height: 600px;
+    }
+
+    .product-img{
+        border-radius: 0;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
 }
