@@ -146,9 +146,18 @@ h1,
     }
 
     .product-img{
-        border-radius: 0;
-        height: 100%;
+        aspect-ratio: unset;
         padding: 0;
         margin: 0;
+        max-width: 50%;
+        min-height: 421px;
+        content: url(images/image-product-desktop.jpg);
+        border-radius: 0;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        display: block;
+    }
+    .product-info{
+        margin: 0 4%;
     }
 }
